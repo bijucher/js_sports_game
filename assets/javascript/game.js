@@ -15,7 +15,7 @@ teamOneShotButtonElement.addEventListener("click", function () {
     //equal to goal count
 
 
-    if (Math.random() < .25) {
+    if (Math.random() < .50) {
         teamOneGoalCount = teamOneGoalCount + 1
         teamOneGoalCountElement.innerHTML = teamOneGoalCount
     }
@@ -38,21 +38,37 @@ teamTwoShotButtonElement.addEventListener("click", function () {
     //equal to goal count
 
 
-    if (Math.random() < .25) {
+    if (Math.random() < .50) {
         teamTwoGoalCount = teamTwoGoalCount + 1
         teamTwoGoalCountElement.innerHTML = teamTwoGoalCount
     }
 })
 
-let resetButtonelement = document.querySelector("reset")
-resetButtonelement.addEventListener("click",function(){
+let resetButtonElement = document.querySelector("#reset")
+let resetButtonCount = 0 
+let resetCountElement = document.querySelector("#num-resets")
+resetButtonElement.addEventListener("click",function(){
+
+        teamOneShotCount = 0;
+        teamOneShotCountElement.innerHTML = teamOneShotCount;
 
 
+        teamOneGoalCount = 0;
+        teamOneGoalCountElement.innerHTML = teamOneGoalCount;
+
+        teamTwoShotCount = 0;
+        teamTwoShotCountElement.innerHTML = teamTwoShotCount;
+
+        teamTwoGoalCount = 0;
+        teamTwoGoalCountElement.innerHTML = teamTwoGoalCount;
+
+        
+        
+        resetButtonCount = resetButtonCount + 1;
+        resetCountElement.innerHTML = resetButtonCount;
+        
 
 
-
-
-    
 })
 
 
